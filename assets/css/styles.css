@@ -1,0 +1,688 @@
+/* Basic styles and colors */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F3F5;
+    color: #2D3436;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #004E64;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #004E64;
+    padding: 20px;
+}
+
+header nav ul li a {
+    color: #F0F3F5;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00A5CF; /* Khaki color on hover */
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #00A5CF;
+    color: #F0F3F5;
+    position: relative;
+    animation: fadeIn 2s ease-in;
+}
+
+.hero img {
+    width: 200px; /* Increased from 150px */
+    border-radius: 50%;
+    /* border: 5px solid #000000; */ /* This line is removed to eliminate the border */
+    transition: transform 0.5s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.3);
+    animation: glowIntense 2s infinite alternate;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background-color: #004E64;
+    color: #F0F3F5;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #F0F3F5;
+    color: #004E64;
+    transform: scale(1.1);
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin: 10px;
+    padding: 15px 20px;
+    background-color: #00A5CF;
+    color: #F0F3F5;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skills li:hover {
+    background-color: #004E64;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #FFFFFC;
+}
+
+/* Projects Page */
+.projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project {
+    background-color: #F0F3F5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project h2 {
+    color: #004E64;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.1rem;
+}
+
+.project button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #FFFFFC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project button:hover {
+    background-color: #00A5CF;
+    color: #F0F3F5;
+    transform: scale(1.1);
+}
+
+.project img {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background-color: #F0F3F5;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.contact h2 {
+    color: #004E64;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #00A5CF;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #F0F3F5;
+    box-sizing: border-box;
+}
+
+.contact form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact form button {
+    background-color: #00A5CF;
+    color: #F0F3F5;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #004E64;
+}
+
+.contact form button:disabled {
+    background-color: #F0F3F5;
+    cursor: not-allowed;
+}
+
+
+
+/* Social Links */
+.social-links {
+    position: static;  /* Change from fixed to static */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;  /* Ensure it takes full width of its container */
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .skills ul {
+        flex-direction: column;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+    
+}
+
+/* Floating Action Buttons (FABs) */
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #004E64;
+    color: #FFFFFC;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    margin-left: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+.fab-email {
+    right: 80px;
+}
+
+.fab-whatsapp {
+    right: 140px;
+}
+
+.fab-instagram {
+    right: 200px;
+}
+
+.fab:hover {
+    transform: scale(1.2);
+    background-color: #00A5CF;
+}
+
+/* Contact form modal */
+#contactModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F0F3F5;
+    padding: 20px;
+    border: 2px solid #000000;
+    z-index: 10;
+}
+
+#contactModal.show {
+    display: block;
+}
+
+/* Overlay for modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9;
+}
+
+.modal-overlay.show {
+    display: block;
+}
+
+/* 3D Button Effect */
+.cta-button, .project button, .contact form button, #sendBtn {
+    position: relative;
+    box-shadow: 0 6px 0 #004E64;
+    top: 0;
+    transition: all 0.1s ease;
+}
+
+.cta-button:active, .project button:active, .contact form button:active, #sendBtn:active {
+    top: 3px;
+    box-shadow: 0 3px 0 #004E64;
+}
+
+/* 3D Card Effect */
+.project, .skills li, #chatbox {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project:hover, .skills li:hover, #chatbox:hover {
+    transform: translateY(-5px) rotateX(5deg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Layered Background Effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(45deg, rgba(190,183,164,0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(190,183,164,0.1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(190,183,164,0.1) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(190,183,164,0.1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    z-index: -1;
+}
+
+/* Glowing Effect for Hero Image */
+.hero img {
+    box-shadow: 0 0 15px rgba(00A5CF,0.5);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px rgba(00A5CF,0.5);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(00A5CF,0.8);
+    }
+}
+
+/* 3D Text Effect */
+.hero h1, .skills h2, .project h2 {
+    text-shadow: 2px 2px 0 #00A5CF, 4px 4px 0 rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.hero h1:hover, .skills h2:hover, .project h2:hover {
+    transform: translateY(-5px);
+    text-shadow: 4px 4px 0 #00A5CF, 8px 8px 0 rgba(0,0,0,0.1);
+}
+
+/* Floating Action Buttons (FABs) with 3D effect */
+.fab {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.fab:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 7px 10px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.fab:active {
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 5px 8px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Parallax Scrolling Effect */
+.hero, .skills, .projects {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Animated Gradient Background for sections */
+.skills, .projects {
+    background: linear-gradient(45deg, #FFFFFC, #00A5CF);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 3D Flip Card Effect for Projects */
+.project {
+    perspective: 1000px;
+}
+
+.project-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.project:hover .project-inner {
+    transform: rotateY(180deg);
+}
+
+.project-front, .project-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.project-back {
+    transform: rotateY(180deg);
+    background-color: #00A5CF;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Neumorphism effect for form inputs */
+.contact form input,
+.contact form textarea {
+    background-color: #FFFFFC;
+    box-shadow: inset 2px 2px 5px #00A5CF, inset -3px -3px 7px #000000;
+}
+
+/* Particle background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #F0F3F5;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+}
+
+/* Ensure other content is above the particle background */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Add a subtle gradient overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 165, 207, 0.5) 0%, rgba(240, 243, 245, 0.5) 100%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+/* Email notification styles */
+#email-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1000;
+    display: none;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.submit-button {
+    background-color: #000000;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #004E64;
+    color: #F0F3F5;
+}
+
+#email-notification.success {
+    background-color: #4CAF50;
+}
+
+#email-notification.error {
+    background-color: #f44336;
+}
+
+/* Enhance form styles */
+.contact form input,
+.contact form textarea,
+.contact form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact form button {
+    background-color: #000000;
+    color: #F0F3F5;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #004E64;
+}
+
+.contact form button:disabled {
+    background-color: #F0F3F5;
+    cursor: not-allowed;
+}
+.about {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #00A5CF; /* Khaki */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.info-block {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #F0F3F5; /* Baby powder */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.info-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill {
+    background-color: #00A5CF;
+    color: #F0F3F5;
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill:hover {
+    background-color: #004E64;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000; /* Black */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.project-image {
+    width: 50%;
+    height: auto;
+}
+
+.wip-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Adjust spacing between columns */
+    margin-top: 20px;
+}
+
+.wip {
+    background-color: #00A5CF; /* Light background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wip h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.wip p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
